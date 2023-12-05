@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://AndreiOncica.github.io/AndreiOncica",
+  "homepage": "https://AndreiOncica.github.io/portofolio-website",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
