@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import { color, SectionWrapper } from "../../assets/GlobalStyles";
 import Links from "./Links";
+import NavBtn from "./Hamburger";
 
 const Nav = styled.nav`
   background-color: ${color.primary};
@@ -19,8 +20,10 @@ const Logo = styled.div`
   }
 `;
 
-export default function Navbar({resize}) {
-  
+export default function Navbar({ viewport }) {
+  const [menuState, setMenuState] = useState(false);
+
+  console.log(menuState);
   return (
     <Nav>
       <SectionWrapper
@@ -35,7 +38,17 @@ export default function Navbar({resize}) {
             dev<span>Andrew</span>
           </a>
         </Logo>
-        <Links />
+        <Links
+          style={{
+            backgroundColor: color.primary,
+            padding: '1rem 0',
+            width: viewport === 'mobile' ? '100%' : 'auto',
+            position: viewport === "desktop" ? "relative" : "absolute",
+            top: viewport === "mobile" ? "80px" : "",
+            justifyContent: 'center',
+            left: viewport === 'mobile' ? 0 : 'auto'
+          }}
+        />
       </SectionWrapper>
     </Nav>
   );

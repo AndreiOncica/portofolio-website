@@ -25,11 +25,12 @@ const data = [
   },
 ];
 
-const NavLinks = styled.ul`
+const NavLinks = styled.div`
   display: flex;
   gap: 3rem;
+  transition: ${({transition}) => transition}
 
-  & li {
+  & div {
     font-size: 16px;
     font-weight: 500;
     color: ${color.textInactive};
@@ -43,14 +44,14 @@ const NavLinks = styled.ul`
   }
 `;
 
-export default function Links() {
+export default function Links({style}) {
   return (
-    <NavLinks>
+    <NavLinks style={style}>
       {data.map((link) => {
         return (
-          <li key={link.id}>
+          <div key={link.id}>
             <a href={link.path}>{link.text}</a>
-          </li>
+          </div>
         );
       })}
     </NavLinks>

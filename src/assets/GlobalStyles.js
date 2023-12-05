@@ -55,6 +55,7 @@ export const SectionWrapper = styled.div`
     justify-content: ${({ justifycontent }) => justifycontent};
     align-items: ${({ alignitems }) => alignitems};
     gap: ${({ gap }) => gap};
+    flex-wrap: ${({flexWrap}) => flexWrap};
 `;
 
 export const Button = styled.button`

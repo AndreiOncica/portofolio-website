@@ -11,23 +11,20 @@ import Card3Img from "../../assets/img/Vouchers.jpg";
 import Card4Img from "../../assets/img/corporate.jpg";
 
 const ProjectCards = styled.div`
-  display: grid;
-  align-items: center;
-  /* justify-content: center; */
-  grid-template-areas:
-    "SPACE CARD2"
-    "CARD1 CARD2"
-    "CARD1 CARD2"
-    "CARD1 CARD4"
-    "CARD3 CARD4"
-    "CARD3 CARD4"
-    "CARD3 CONTACT";
-  row-gap: 3.45rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 `;
 
-const Card = styled.div`
-  width: 337px;
+const Card = styled.a`
+  width: 335px;
   height: 384px;
+
+  @media screen and (max-width: 768px) {
+    /* width: 100%; */
+    background-repeat: no-repeat;
+  }
 `;
 
 const Contact = styled.div`
@@ -43,24 +40,16 @@ export default function Projects() {
     <section id="projects">
       <SectionWrapper display="flex" flexdirection="column" gap="3rem">
         <SectionTitle>projects</SectionTitle>
-        <ProjectCards >
-          <Card
-            style={{ gridArea: "CARD1", backgroundImage: `url(${Card1Img})` }}
-          ></Card>
-          <Card
-            style={{ gridArea: "CARD2", backgroundImage: `url(${Card2Img})` }}
-          ></Card>
-          <Card
-            style={{ gridArea: "CARD3", backgroundImage: `url(${Card3Img})` }}
-          ></Card>
-          <Card
-            style={{ gridArea: "CARD4", backgroundImage: `url(${Card4Img})` }}
-          ></Card>
-          <Contact>
-            <div>Like my work?</div>
-            <Button>Contact me</Button>
-          </Contact>
+        <ProjectCards>
+          <Card href="https://avstore.ro/sennheiser" style={{ backgroundImage: `url(${Card1Img})` }}></Card>
+          <Card href="https://avstore.ro/music" style={{ backgroundImage: `url(${Card2Img})` }}></Card>
+          <Card href="https://avstore.ro/vouchere-cadou" style={{ backgroundImage: `url(${Card3Img})` }}></Card>
+          <Card href="https://avstore.ro/corporate" style={{ backgroundImage: `url(${Card4Img})` }}></Card>
         </ProjectCards>
+        <Contact>
+          <div>Like my work?</div>
+          <Button>Contact me</Button>
+        </Contact>
       </SectionWrapper>
     </section>
   );

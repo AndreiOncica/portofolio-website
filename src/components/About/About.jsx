@@ -33,6 +33,12 @@ const AboutContact = styled.div`
             text-decoration: underline;
         }
     }
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
 `
 
 export default function About() {
@@ -58,7 +64,7 @@ export default function About() {
                 <div>office@devandrew.net</div>
             </div>
             <div style={{fontSize: "28px"}}>- or -</div>
-            <Button>Contact Me</Button>
+            <Button><a href="#contact">Contact Me</a></Button>
         </AboutContact>
       </SectionWrapper>
     </section>

@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { color, SectionWrapper } from "../../assets/GlobalStyles";
 import SocialIcons from "../Main/SocialIcons";
-import Form from './Form'
-
+import Form from "./Form";
 
 const Left = styled.div`
   display: flex;
@@ -15,7 +14,6 @@ const Left = styled.div`
     color: ${color.accent};
   }
 `;
-
 
 const Right = styled.div`
   & form {
@@ -58,10 +56,15 @@ const Right = styled.div`
   }
 `;
 
-export default function Footer() {
+export default function Footer({ viewport }) {
   return (
     <section id="contact">
-      <SectionWrapper display="flex" justifycontent="space-between">
+      <SectionWrapper
+        display="flex"
+        justifycontent={viewport === "desktop" ? "space-between" : "center"}
+        flexWrap="wrap"
+        gap="4rem"
+      >
         <Left>
           <h5>Got a project?</h5>
           <p>Let's talk</p>
