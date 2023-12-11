@@ -41,14 +41,28 @@ export default function Projects() {
       <SectionWrapper display="flex" flexdirection="column" gap="3rem">
         <SectionTitle>projects</SectionTitle>
         <ProjectCards>
-          <Card href="https://avstore.ro/sennheiser" style={{ backgroundImage: `url(${Card1Img})` }}></Card>
-          <Card href="https://avstore.ro/music" style={{ backgroundImage: `url(${Card2Img})` }}></Card>
-          <Card href="https://avstore.ro/vouchere-cadou" style={{ backgroundImage: `url(${Card3Img})` }}></Card>
-          <Card href="https://avstore.ro/corporate" style={{ backgroundImage: `url(${Card4Img})` }}></Card>
+          <Card
+            href="https://avstore.ro/sennheiser"
+            style={{ backgroundImage: `url(${Card1Img})` }}
+          ></Card>
+          <Card
+            href="https://avstore.ro/music"
+            style={{ backgroundImage: `url(${Card2Img})` }}
+          ></Card>
+          <Card
+            href="https://avstore.ro/vouchere-cadou"
+            style={{ backgroundImage: `url(${Card3Img})` }}
+          ></Card>
+          <Card
+            href="https://avstore.ro/corporate"
+            style={{ backgroundImage: `url(${Card4Img})` }}
+          ></Card>
         </ProjectCards>
         <Contact>
           <div>Like my work?</div>
-          <Button>Contact me</Button>
+          <a href="#contact">
+            <Button>Contact me</Button>
+          </a>
         </Contact>
       </SectionWrapper>
     </section>

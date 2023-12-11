@@ -10,9 +10,7 @@ const Left = styled.div`
   align-items: flex-start;
   gap: 1rem;
 
-  & div {
-    color: ${color.accent};
-  }
+
 `;
 
 const Right = styled.div`

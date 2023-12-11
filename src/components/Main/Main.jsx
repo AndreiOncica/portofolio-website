@@ -19,7 +19,8 @@ const MainText = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    & h4, h5 {
+    & h4,
+    h5 {
       font-size: 28px;
     }
     & h1 {
@@ -57,9 +58,9 @@ export default function Main() {
           <h4>A frontend developer based in Romania</h4>
         </MainText>
         <MainButtons>
-          <Button>
-            <a href="#about">My story</a>
-          </Button>
+          <a href="#about">
+            <Button>My story</Button>
+          </a>
           <SocialIcons />
         </MainButtons>
       </SectionWrapper>
