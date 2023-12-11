@@ -28,7 +28,7 @@ const data = [
 const NavLinks = styled.div`
   display: flex;
   gap: 3rem;
-  transition: ${({transition}) => transition}
+  transition: ${({transition}) => transition};
 
   & div {
     font-size: 16px;
