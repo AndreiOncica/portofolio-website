@@ -99,7 +99,7 @@ Error generating stack: `+i.message+`
 `,Wm=[{id:1,path:"#about",text:"ABOUT"},{id:2,path:"#services",text:"SERVICES"},{id:3,path:"#projects",text:"PROJECTS"},{id:4,path:"#contact",text:"CONTACT"}],Qm=W.div`
   display: flex;
   gap: 3rem;
-  transition: ${({transition:e})=>e}
+  transition: ${({transition:e})=>e};
 
   & div {
     font-size: 16px;
